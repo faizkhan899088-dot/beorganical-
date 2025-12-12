@@ -91,7 +91,6 @@
             font-weight: bold;
         }
         .cart-btn:hover { background: var(--gold); color: #000; transform: scale(1.05); }
-
         .modal {
             display: none;
             position: fixed;
@@ -203,6 +202,7 @@
     </style>
 </head>
 <body>
+
     <header>
         <h1>Adam Shilajit®</h1>
         <p>Pure Himalayan Shilajit Resin • 85+ Minerals • Lab Tested • Since 2023</p>
@@ -210,6 +210,33 @@
             Limited Offer – Only ₹2000
         </button>
     </header>
+
+    <!-- NEW: Teen Product Images Section -->
+    <section style="padding: 100px 20px; background: #000;">
+        <div class="container">
+            <h2 style="font-size: 3.2rem; color: var(--gold); margin-bottom: 70px; text-shadow: 0 0 20px rgba(212,175,55,0.4);">
+                Fresh Stock Just Arrived!
+            </h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; max-width: 1400px; margin: 0 auto;">
+                
+                <div style="text-align: center;">
+                    <img src="https://beorganical.vercel.app/herbal_tea_box.jpg" alt="Herbal Green Tea Box" style="width: 100%; max-width: 420px; border-radius: 28px; border: 5px solid var(--gold); box-shadow: 0 25px 60px rgba(212,175,55,0.45); transition: 0.4s;">
+                    <p style="margin-top: 20px; font-size: 1.6rem; color: #ccc; font-weight: 500;">Herbal Green Tea Blend</p>
+                </div>
+
+                <div style="text-align: center;">
+                    <img src="https://beorganical.vercel.app/adam_shilajit_box.jpg" alt="Adam Shilajit 50g Premium" style="width: 100%; max-width: 420px; border-radius: 28px; border: 5px solid var(--gold); box-shadow: 0 25px 60px rgba(212,175,55,0.45); transition: 0.4s;">
+                    <p style="margin-top: 20px; font-size: 1.8rem; color: var(--gold); font-weight: bold;">Adam Shilajit® Premium Resin (50g)</p>
+                </div>
+
+                <div style="text-align: center;">
+                    <img src="https://beorganical.vercel.app/saffron.jpg" alt="Pure Kashmiri Saffron" style="width: 100%; max-width: 420px; border-radius: 28px; border: 5px solid var(--gold); box-shadow: 0 25px 60px rgba(212,175,55,0.45); transition: 0.4s;">
+                    <p style="margin-top: 20px; font-size: 1.6rem; color: #ccc; font-weight: 500;">Pure Kashmiri Saffron (Kesar)</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <section class="benefits" style="background:#111;">
         <div class="container">
@@ -236,62 +263,38 @@
         </div>
     </section>
 
-    <!-- FIXED ₹2000 ONLY QR CODE MODAL -->
+    <!-- Modal remains same -->
     <div class="modal" id="paymentModal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">×</span>
             <h2 style="color:var(--gold); font-size:2.2rem;">Complete Payment – ₹2000 Only</h2>
-            
             <div class="order-summary">
                 <p><strong>Product:</strong> Adam Shilajit Premium Resin (50g)</p>
                 <p><strong>Price:</strong> ₹2000 (Fixed - Cannot be changed)</p>
                 <p><strong>Shipping:</strong> FREE Pan India</p>
                 <p style="font-size:1.8rem;color:var(--gold);margin-top:20px;"><strong>Total: ₹2000 Only</strong></p>
             </div>
-
             <div class="payment-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <p>Scan QR Code</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <p>₹2000 auto-fills in UPI app</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <p>Complete payment</p>
-                </div>
+                <div class="step"><div class="step-number">1</div><p>Scan QR Code</p></div>
+                <div class="step"><div class="step-number">2</div><p>₹2000 auto-fills in UPI app</p></div>
+                <div class="step"><div class="step-number">3</div><p>Complete payment</p></div>
             </div>
-
             <p style="font-size:1.3rem;margin:20px 0;"><strong>Scan QR → ₹2000 automatically loads in your payment app</strong></p>
-
-            <!-- EXACT ₹2000 LOCKED QR CODE -->
             <div class="qr-container">
                 <div class="fixed-amount-badge">Fixed Amount: ₹2000</div>
-                <!-- UPI QR Code with fixed amount of 2000.00 INR -->
                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=upi://pay?pa=8979401469@ptaxis&pn=AdamShilajit&am=2000.00&cu=INR&tn=Adam%20Shilajit%2050g%20Order&mode=02" alt="Pay Exactly ₹2000" class="qr-code">
             </div>
-
             <p style="margin:20px 0; font-size:1.4rem;">
                 <strong>UPI ID:</strong> <span style="color:var(--gold);font-size:1.5rem;">8979401469@ptaxis</span>
             </p>
-
             <div style="background:#1e1e1e;padding:20px;border-radius:15px;margin:25px 0;">
-                <p style="color:#ff4444;font-weight:bold;font-size:1.2rem;">⚠️ Important: Amount is locked to ₹2000</p>
+                <p style="color:#ff4444;font-weight:bold;font-size:1.2rem;">Important: Amount is locked to ₹2000</p>
                 <p>After payment, send screenshot to WhatsApp within 2 minutes:</p>
-                <p style="font-size:1.5rem;color:var(--gold);margin-top:10px;">
-                    <strong>WhatsApp: +91 98XXXXXXXX</strong>
-                </p>
+                <p style="font-size:1.5rem;color:var(--gold);margin-top:10px;"><strong>WhatsApp: +91 98XXXXXXXX</strong></p>
             </div>
-
             <div style="display:flex;gap:15px;justify-content:center;margin-top:30px;">
-                <button class="btn" onclick="closeModal()" style="padding:15px 30px;">
-                    I'll Pay Later
-                </button>
-                <button class="btn" onclick="closeModal()" style="background:#0a0;padding:15px 30px;">
-                    Payment Done ✓
-                </button>
+                <button class="btn" onclick="closeModal()" style="padding:15px 30px;">I'll Pay Later</button>
+                <button class="btn" onclick="closeModal()" style="background:#0a0;padding:15px 30px;">Payment Done</button>
             </div>
         </div>
     </div>
@@ -314,8 +317,6 @@
         window.onclick = function(event) {
             if (event.target == document.getElementById("paymentModal")) closeModal();
         }
-        
-        // Auto-scroll to payment modal if URL has #payment parameter
         window.onload = function() {
             if(window.location.hash === '#payment') {
                 setTimeout(openModal, 1000);
