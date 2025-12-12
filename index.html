@@ -3,175 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BeOrganical - Premium Shilajit</title>
+    <title>BeOrganical® - Pure Himalayan Shilajit Resin</title>
+    <meta name="description" content="Purest Himalayan Shilajit Resin | Lab Tested | 85+ Minerals | Boost Energy & Stamina">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Reset styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --gold: #d4af37;
+            --dark: #0f0f0f;
+            --gray: #1a1a1a;
         }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
+            font-family: 'Inter', sans-serif;
+            background: var(--dark);
+            color: #eee;
+            line-height: 1.7;
+            overflow-x: hidden;
         }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
 
-        /* Header */
+        /* Header Hero */
         header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1950') center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
+            padding: 0 20px;
         }
+        header h1 { font-size: 4.8rem; color: var(--gold); }
+        header p { font-size: 1.4rem; max-width: 700px; margin: 20px 0; }
 
-        header h1 {
-            font-size: 2.5em;
-        }
-
-        /* Hero Section */
-        .hero {
-            background-color: #fff;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .hero img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        .hero h2 {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            margin-bottom: 20px;
-        }
-
-        /* Product Section */
-        .product {
-            background-color: #fff;
-            padding: 40px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .product h3 {
-            font-size: 1.8em;
-            margin-bottom: 15px;
-        }
-
-        .product ul {
-            list-style-type: disc;
-            margin-left: 20px;
-            margin-bottom: 20px;
-        }
-
-        .price {
-            font-size: 1.5em;
-            color: #4CAF50;
-            margin-bottom: 20px;
-        }
-
-        /* Payment Section */
-        .payment {
-            background-color: #fff;
-            padding: 40px 20px;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .payment h3 {
-            font-size: 1.8em;
-            margin-bottom: 15px;
-        }
-
-        .payment img {
-            max-width: 200px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        .payment p {
-            margin-bottom: 10px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-
-        /* Button Style */
         .btn {
-            display: inline-block;
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 5px;
-            margin-top: 20px;
+            background: var(--gold);
+            color: #000;
+            padding: 16px 45px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(212,175,55,0.4); }
+
+        section { padding: 90px 20px; text-align: center; }
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .card {
+            background: #1e1e1e;
+            padding: 35px;
+            border-radius: 18px;
+            border: 1px solid #333;
+        }
+        .card h3 { color: var(--gold); margin-bottom: 15px; }
+
+        .product-img {
+            max-width: 100%;
+            border-radius: 25px;
+            box-shadow: 0 25px 50px rgba(212,175,55,0.25);
+        }
+        .price {
+            font-size: 3.8rem;
+            color: var(--gold);
+            font-weight: bold;
+            margin: 30px 0;
+        }
+        .old-price {
+            text-decoration: line-through;
+            color: #777;
+            font-size: 1.8rem;
+            margin-left: 15px;
         }
 
-        .btn:hover {
-            background-color: #45a049;
+        /* Cart Button */
+        .cart-btn {
+            background: #000;
+            color: white;
+            padding: 18px 50px;
+            font-size: 1.4rem;
+            border: 2px solid var(--gold);
+            margin-top: 20px;
         }
+        .cart-btn:hover { background: var(--gold); color: #000; }
+
+        /* Modal / Popup */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .modal-content {
+            background: #111;
+            padding: 40px;
+            border-radius: 25px;
+            max-width: 500px;
+            width: 100%;
+            border: 2px solid var(--gold);
+            text-align: center;
+            animation: pop 0.4s ease;
+        }
+        @keyframes pop {
+            0% { transform: scale(0.7); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 2rem;
+            color: #aaa;
+            cursor: pointer;
+        }
+        .qr-code {
+            width: 280px;
+            height: 280px;
+            margin: 25px auto;
+            padding: 15px;
+            background: white;
+            border-radius: 20px;
+        }
+        .order-summary {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            background: #000;
+            padding: 50px 20px;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+        footer a { color: var(--gold); text-decoration: none; }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Hero -->
     <header>
-        <h1>BeOrganical</h1>
-        <p>Your Source for Premium Organic Shilajit</p>
+        <h1>BeOrganical®</h1>
+        <p>Pure Himalayan Shilajit Resin • 85+ Minerals • Lab Tested • Since 2023</p>
+        <button class="btn" onclick="document.getElementById('buy').scrollIntoView({behavior:'smooth'})">
+            Order at 50% OFF
+        </button>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <img src="https://via.placeholder.com/600x400?text=Shilajit+Product" alt="Shilajit Product Image">
-        <h2>Welcome to BeOrganical</h2>
-        <p>Discover the power of pure Himalayan Shilajit for natural energy and wellness.</p>
-        <a href="#product" class="btn">Shop Now</a>
+    <!-- Benefits -->
+    <section class="benefits" style="background:#111;">
+        <div class="container">
+            <h2 style="font-size:3rem;color:var(--gold);">Why 10,000+ Men Choose BeOrganical</h2>
+            <div class="grid">
+                <div class="card"><h3>100% Pure</h3><p>No fillers, no chemicals</div>
+                <div class="card"><h3>Lab Certified</h3><p>Heavy metal & purity report</div>
+                <div class="card"><h3>Boosts Stamina</h3><p>Feel energy in 7 days</div>
+                <div class="card"><h3>COD + Online</h3><p>Pay after delivery also available</div>
+            </div>
+        </div>
     </section>
 
     <!-- Product Section -->
-    <section id="product" class="product">
-        <h3>Premium Shilajit Resin</h3>
-        <p>Our Shilajit is sourced from the pristine Himalayas, purified to the highest standards. Rich in fulvic acid and minerals for boosted vitality.</p>
-        <ul>
-            <li>100% Organic and Natural</li>
-            <li>Lab-Tested for Purity</li>
-            <li>Supports Energy, Immunity, and Overall Health</li>
-            <li>Easy to Use: Dissolve in Water or Tea</li>
-        </ul>
-        <div class="price">Price: ₹999 (50g Jar)</div>
-        <a href="#payment" class="btn">Buy Now</a>
+    <section id="buy" style="background:#000;">
+        <div class="container">
+            <img src="https://images.unsplash.com/photo-1622489768536-4d9ebedb8b90?q=80&w=800" alt="Shilajit Jar" class="product-img">
+            <h2>Pure Himalayan Shilajit Resin</h2>
+            <p style="font-size:1.4rem;margin:20px 0;">50g Premium Jar • Limited Stock</p>
+            <div class="price">₹999 <span class="old-price">₹1999</span></div>
+            <p style="color:#0f0; font-weight:bold;">50% OFF + Free Shipping All India</p>
+            <button class="btn cart-btn" onclick="openModal()">
+                Add to Cart → Pay via UPI
+            </button>
+        </div>
     </section>
 
-    <!-- Payment Section -->
-    <section id="payment" class="payment">
-        <h3>Secure Payment via QR Code</h3>
-        <p>Scan the QR code below to complete your payment using UPI (e.g., Google Pay, PhonePe).</p>
-        <img src="https://via.placeholder.com/200x200?text=QR+Code+for+Payment" alt="Payment QR Code">
-        <p>Amount: ₹999 | Reference: Shilajit Order</p>
-        <p>After payment, email your transaction ID to support@beorganical.com for confirmation and shipping.</p>
-    </section>
+    <!-- Payment Modal (Popup) -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">×</span>
+            <h2 style="color:var(--gold); margin-bottom:20px;">Complete Your Order</h2>
+            <div class="order-summary">
+                <p><strong>Product:</strong> BeOrganical Shilajit (50g)</p>
+                <p><strong>Price:</strong> ₹999</p>
+                <p><strong>Shipping:</strong> FREE</p>
+                <p style="font-size:1.4rem;color:var(--gold);margin-top:15px;"><strong>Total: ₹999</strong></p>
+            </div>
+            <p>Scan QR Code with any UPI App</p>
+            <!-- Apna UPI ID yahan change kar dena -->
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=upi://pay?pa=YOUR_UPI_ID@oksbi&pn=BeOrganical&am=999&cu=INR&tn=Shilajit%20Order%20999" alt="UPI QR" class="qr-code">
+            <p><strong>UPI ID:</strong> <span style="color:var(--gold);">YOUR_UPI_ID@oksbi</span></p>
+            <p style="margin-top:25px; background:#1e1e1e; padding:15px; border-radius:12px;">
+                Payment ke 2 minute baad screenshot bhejo:<br>
+                <strong style="color:var(--gold);">WhatsApp: +91-98XXXXXXXX</strong>
+            </p>
+            <button class="btn" style="margin-top:20px;" onclick="closeModal()">Done, Payment Sent</button>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 BeOrganical. All rights reserved.</p>
-        <p>Contact: support@beorganical.com</p>
+        <h3>BeOrganical®</h3>
+        <p>support@beorganical.com | WhatsApp: +91-98XXXXXXXX</p>
+        <p>&copy; 2025 BeOrganical – Purest Shilajit from the Himalayas</p>
     </footer>
+
+    <!-- JavaScript for Modal -->
+    <script>
+        function openModal() {
+            document.getElementById("paymentModal").style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
+        function closeModal() {
+            document.getElementById("paymentModal").style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+        // Close on clicking outside
+        window.onclick = function(event) {
+            var modal = document.getElementById("paymentModal");
+            if (event.target == modal) closeModal();
+        }
+    </script>
 
 </body>
 </html>
