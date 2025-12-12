@@ -10,7 +10,6 @@
         :root {
             --gold: #d4af37;
             --dark: #0f0f0f;
-            --gray: #1a1a1a;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -65,12 +64,12 @@
             width: 420px;
             border-radius: 25px;
             box-shadow: 0 25px 60px rgba(212,175,55,0.4);
-            margin: 20px auto;
+            margin: 30px auto;
             display: block;
-            border: 3px solid var(--gold);
+            border: 4px solid var(--gold);
         }
         .price {
-            font-size: 4.2rem;
+            font-size: 4.5rem;
             color: var(--gold);
             font-weight: bold;
             margin: 30px 0;
@@ -78,24 +77,26 @@
         .old-price {
             text-decoration: line-through;
             color: #777;
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-left: 15px;
         }
         .cart-btn {
             background: #000;
             color: white;
-            padding: 18px 60px;
-            font-size: 1.5rem;
-            border: 2px solid var(--gold);
-            margin-top: 20px;
+            padding: 20px 70px;
+            font-size: 1.6rem;
+            border: 3px solid var(--gold);
+            margin-top: 25px;
             border-radius: 50px;
+            font-weight: bold;
         }
-        .cart-btn:hover { background: var(--gold); color: #000; }
+        .cart-btn:hover { background: var(--gold); color: #000; transform: scale(1.05); }
+
         .modal {
             display: none;
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.95);
+            background: rgba(0,0,0,0.97);
             z-index: 9999;
             justify-content: center;
             align-items: center;
@@ -103,52 +104,54 @@
         }
         .modal-content {
             background: #111;
-            padding: 40px;
-            border-radius: 25px;
-            max-width: 520px;
+            padding: 45px;
+            border-radius: 28px;
+            max-width: 540px;
             width: 100%;
-            border: 2px solid var(--gold);
+            border: 3px solid var(--gold);
             text-align: center;
-            animation: pop 0.4s ease;
+            animation: pop 0.5s ease;
         }
         @keyframes pop {
-            0% { transform: scale(0.7); opacity: 0; }
+            0% { transform: scale(0.6); opacity: 0; }
             100% { transform: scale(1); opacity: 1; }
         }
         .close {
             position: absolute;
             top: 15px;
             right: 25px;
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: #aaa;
             cursor: pointer;
         }
         .qr-code {
-            width: 280px;
-            height: 280px;
-            margin: 25px auto;
-            padding: 15px;
+            width: 300px;
+            height: 300px;
+            margin: 30px auto;
+            padding: 20px;
             background: white;
-            border-radius: 20px;
+            border-radius: 25px;
+            box-shadow: 0 0 30px rgba(212,175,55,0.6);
         }
         .order-summary {
             background: #1e1e1e;
-            padding: 20px;
-            border-radius: 15px;
-            margin: 20px 0;
-            font-size: 1.1rem;
+            padding: 25px;
+            border-radius: 18px;
+            margin: 25px 0;
+            font-size: 1.2rem;
+            border: 1px solid #333;
         }
         footer {
             background: #000;
-            padding: 50px 20px;
+            padding: 60px 20px;
             text-align: center;
             border-top: 1px solid #333;
         }
-        footer a { color: var(--gold); text-decoration: none; }
         @media (max-width: 768px) {
             header h1 { font-size: 3.2rem; }
-            .product-img { width: 90%; }
-            .price { font-size: 3.2rem; }
+            .product-img { width: 92%; }
+            .price { font-size: 3.5rem; }
+            .qr-code { width: 260px; height: 260px; }
         }
     </style>
 </head>
@@ -168,55 +171,63 @@
                 <div class="card"><h3>100% Pure</h3><p>No fillers, no chemicals</p></div>
                 <div class="card"><h3>Lab Certified</h3><p>Heavy metal & purity report</p></div>
                 <div class="card"><h3>Boosts Stamina</h3><p>Feel energy in 7 days</p></div>
-                <div class="card"><h3>COD + Online</h3><p>Pay after delivery also available</p></div>
+                <div class="card"><h3>COD + Online</h3><p>Pay after delivery time also available</p></div>
             </div>
         </div>
     </section>
 
     <section id="buy" style="background:#000;">
         <div class="container">
-            <img src="https://beorganical.vercel.app/adam_shilajit_box.jpg" alt="Adam Shilajit Pure Himalayan Resin 50g" class="product-img">
+            <img src="https://beorganical.vercel.app/adam_shilajit_box.jpg" alt="Adam Shilajit 50g Premium Jar" class="product-img">
             <h2>Pure Himalayan Shilajit Resin</h2>
-            <p style="font-size:1.4rem;margin:25px 0;">50g Premium Jar • Very Limited Stock</p>
+            <p style="font-size:1.4rem;margin:25px 0;">50g Premium Glass Jar • Very Limited Stock</p>
             <div class="price">₹2000 <span class="old-price">₹3999</span></div>
-            <p style="color:#0f0; font-size:1.5rem; font-weight:bold;">50% OFF Today Only + Free Shipping Pan India</p>
+            <p style="color:#0f0; font-size:1.6rem; font-weight:bold;">50% OFF Today Only + Free Shipping All India</p>
             <button class="btn cart-btn" onclick="openModal()">
-                Buy Now at ₹2000 → Pay via UPI
+                Buy Now → Exact ₹2000 Pay via UPI
             </button>
         </div>
     </section>
 
-    <!-- Payment Modal with YOUR REAL UPI ID -->
+    <!-- FIXED ₹2000 ONLY QR CODE MODAL -->
     <div class="modal" id="paymentModal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">×</span>
-            <h2 style="color:var(--gold); margin-bottom:20px;">Complete Your Order – ₹2000</h2>
+            <h2 style="color:var(--gold); font-size:2.2rem;">Complete Payment – ₹2000 Only</h2>
             <div class="order-summary">
-                <p><strong>Product:</strong> Adam Shilajit (50g)</p>
-                <p><strong>Original Price:</strong> <del>₹3999</del></p>
-                <p><strong>Today’s Price:</strong> ₹2000</p>
-                <p><strong>Shipping:</strong> FREE</p>
-                <p style="font-size:1.6rem;color:var(--gold);margin-top:20px;"><strong>Total Payable: ₹2000</strong></p>
+                <p><strong>Product:</strong> Adam Shilajit Premium Resin (50g)</p>
+                <p><strong>Price:</strong> ₹2000 (Fixed)</p>
+                <p><strong>Shipping:</strong> FREE Pan India</p>
+                <p style="font-size:1.8rem;color:var(--gold);margin-top:20px;"><strong>Total: ₹2000 Only</strong></p>
             </div>
-            <p>Scan QR with PhonePe / GPay / Paytm / BHIM</p>
 
-            <!-- Aapka Real UPI ID QR Code -->
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=upi://pay?pa=8979401469@ptaxis&pn=AdamShilajit&am=2000&cu=INR&tn=Shilajit%20Order" alt="UPI QR Code" class="qr-code">
+            <p style="font-size:1.3rem;margin:20px 0;"><strong>Scan QR → Exact ₹2000 hi aayega</strong></p>
 
-            <p><strong>UPI ID:</strong> <span style="color:var(--gold);">8979401469@ptaxis</span></p>
+            <!-- EXACT ₹2000 LOCKED QR CODE -->
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=upi://pay?pa=8979401469@ptaxis&pn=AdamShilajit&am=2000.00&cu=INR&tn=Adam%20Shilajit%2050g%20Order&mam=2000.00&mode=02" alt="Pay Exactly 2000" class="qr-code">
 
-            <p style="margin-top:25px; background:#1e1e1e; padding:15px; border-radius:12px;">
-                Payment karne ke 2 minute ke andar screenshot bhejo:<br>
-                <strong style="color:var(--gold);">WhatsApp: +91-98XXXXXXXX</strong>
+            <p style="margin:20px 0; font-size:1.4rem;">
+                <strong>UPI ID:</strong> <span style="color:var(--gold);font-size:1.5rem;">8979401469@ptaxis</span>
             </p>
-            <button class="btn" style="margin-top:20px;" onclick="closeModal()">Payment Done</button>
+
+            <div style="background:#1e1e1e;padding:20px;border-radius:15px;margin:25px 0;">
+                <p style="color:#ff4444;font-weight:bold;">Warning: Sirf ₹2000 hi pay karein</p>
+                <p>Payment ke 2 minute ke andar screenshot bhejen:</p>
+                <p style="font-size:1.5rem;color:var(--gold);margin-top:10px;">
+                    <strong>WhatsApp: +91 98XXXXXXXX</strong>
+                </p>
+            </div>
+
+            <button class="btn" style="margin-top:20px;padding:18px 50px;" onclick="closeModal()">
+                Payment Done – Order Confirmed
+            </button>
         </div>
     </div>
 
     <footer>
         <h3>Adam Shilajit®</h3>
-        <p>support@adamshilajit.com | WhatsApp: +91-98XXXXXXXX</p>
-        <p>© 2025 Adam Shilajit – Purest Shilajit from the Himalayas</p>
+        <p>support@adamshilajit.com | WhatsApp: +91 98XXXXXXXX</p>
+        <p>© 2025 Adam Shilajit – Purest Resin from Himalayas</p>
     </footer>
 
     <script>
@@ -229,8 +240,7 @@
             document.body.style.overflow = "auto";
         }
         window.onclick = function(event) {
-            var modal = document.getElementById("paymentModal");
-            if (event.target == modal) closeModal();
+            if (event.target == document.getElementById("paymentModal")) closeModal();
         }
     </script>
 </body>
