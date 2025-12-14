@@ -14,6 +14,7 @@
             background-color: #f8f9fa;
             color: #333;
             line-height: 1.6;
+            direction: ltr; /* Keep overall LTR, but about section will be RTL */
         }
         header {
             background-color: #1a2b3c;
@@ -94,7 +95,7 @@
             margin: 0 auto;
             padding: 40px 20px;
         }
-        
+       
         /* Products Section - Now Upper */
         .products-section {
             padding: 60px 0;
@@ -163,7 +164,6 @@
         .product button:hover {
             background-color: #218838;
         }
-
         /* About Section - Now Below Products */
         .about {
             background-color: white;
@@ -171,14 +171,15 @@
             border-radius: 15px;
             box-shadow: 0 6px 25px rgba(0,0,0,0.05);
             margin: 60px 0;
+            direction: rtl; /* RTL for Arabic text */
+            text-align: right;
         }
-        .about h2 {
+        .about h2, .about h3 {
             text-align: center;
             color: #1a2b3c;
             margin-bottom: 30px;
             font-size: 36px;
         }
-
         .testimonials {
             background-color: #f8f9fa;
             padding: 60px 0;
@@ -212,7 +213,6 @@
             font-weight: bold;
             color: #1a2b3c;
         }
-
         .signup {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://m.media-amazon.com/images/I/51lu0ZDWcAL._AC_UF1000,1000_QL80_.jpg');
             background-size: cover;
@@ -254,7 +254,6 @@
         .signup button:hover {
             background-color: #e6c200;
         }
-
         footer {
             background-color: #1a2b3c;
             color: white;
@@ -270,7 +269,6 @@
         footer a:hover {
             text-decoration: underline;
         }
-
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 42px;
@@ -305,13 +303,13 @@
             </ul>
         </nav>
     </header>
-    
+   
     <section class="hero">
         <h1>Premium Shilajit Coming Soon to Dubai!</h1>
         <p>Discover the ancient power of Himalayan Shilajit – Pure, Potent, and Natural.</p>
         <button>Notify Me on Launch</button>
     </section>
-    
+   
     <!-- Products Section Moved Up -->
     <section id="products" class="products-section">
         <h2>Upcoming Products</h2>
@@ -321,64 +319,64 @@
                 <h3>Pure Himalayan Shilajit Resin</h3>
                 <p>High potency gold grade for maximum benefits.</p>
                 <div class="price">AED 199</div>
-                <button>Add to Cart (Coming Soon)</button>
+                <button onclick="window.location.href='https://wa.me/971501234567?text=I'm%20interested%20in%20Pure%20Himalayan%20Shilajit%20Resin'">Add to Cart (Coming Soon)</button>
             </div>
             <div class="product">
                 <img src="https://m.media-amazon.com/images/I/51-1+41e3kL._AC_UF1000,1000_QL80_.jpg" alt="Organic Shilajit Resin">
                 <h3>Organic Shilajit Resin</h3>
                 <p>Enhances health and boosts energy naturally.</p>
                 <div class="price">AED 179</div>
-                <button>Add to Cart (Coming Soon)</button>
+                <button onclick="window.location.href='https://wa.me/971501234567?text=I'm%20interested%20in%20Organic%20Shilajit%20Resin'">Add to Cart (Coming Soon)</button>
             </div>
             <div class="product">
                 <img src="https://m.media-amazon.com/images/I/51lu0ZDWcAL._AC_UF1000,1000_QL80_.jpg" alt="VedVision Shilajit">
                 <h3>VedVision Shilajit</h3>
                 <p>400mg A Grade with essential minerals.</p>
                 <div class="price">AED 149</div>
-                <button>Add to Cart (Coming Soon)</button>
+                <button onclick="window.location.href='https://wa.me/971501234567?text=I'm%20interested%20in%20VedVision%20Shilajit'">Add to Cart (Coming Soon)</button>
             </div>
             <div class="product">
                 <img src="https://m.media-amazon.com/images/I/717QvQaJrWL._AC_UF1000,1000_QL80_.jpg" alt="ZING Shilajit Resin">
                 <h3>ZING Shilajit Resin</h3>
                 <p>For men and women, 600mg servings.</p>
                 <div class="price">AED 229</div>
-                <button>Add to Cart (Coming Soon)</button>
+                <button onclick="window.location.href='https://wa.me/971501234567?text=I'm%20interested%20in%20ZING%20Shilajit%20Resin'">Add to Cart (Coming Soon)</button>
             </div>
             <div class="product">
                 <img src="https://m.media-amazon.com/images/I/81Lj+t75xbL._AC_UF1000,1000_QL80_.jpg" alt="Premium Shilajit">
                 <h3>Premium Shilajit</h3>
                 <p>Natural and potent for daily wellness.</p>
                 <div class="price">AED 189</div>
-                <button>Add to Cart (Coming Soon)</button>
+                <button onclick="window.location.href='https://wa.me/971501234567?text=I'm%20interested%20in%20Premium%20Shilajit'">Add to Cart (Coming Soon)</button>
             </div>
         </div>
     </section>
-    
+   
     <div class="container">
-        <!-- About Section Now Below Products -->
+        <!-- About Section Now Below Products - In Arabic -->
         <section id="about" class="about">
-            <h2>About Shilajit</h2>
-            <p>Shilajit is a potent and ancient natural substance that has been revered in Ayurvedic medicine for thousands of years. Originating from the high-altitude regions of the Himalayas, Altai, Caucasus, and other mountain ranges, Shilajit is formed over centuries by the decomposition of plant and microbial matter. This tar-like resin is rich in fulvic acid, humic acid, and over 84 minerals, making it a powerhouse of nutrients that can support overall health and vitality.</p>
-            
-            <p>Historically, Shilajit has been used in traditional medicine systems across India, Tibet, and Central Asia. Ancient texts describe it as a "conqueror of mountains" and a "destroyer of weakness," highlighting its role in enhancing physical strength, mental clarity, and longevity. In modern times, Shilajit has gained popularity worldwide as a dietary supplement, particularly for its potential to boost energy levels, improve cognitive function, and support reproductive health.</p>
-            
-            <h3>Benefits of Shilajit</h3>
-            <p>One of the most well-known benefits of Shilajit is its ability to increase energy and stamina. The fulvic acid in Shilajit helps in the transportation of nutrients into cells, enhancing mitochondrial function, which is crucial for energy production. Studies have shown that regular consumption of Shilajit can reduce fatigue and improve physical performance, making it an ideal supplement for athletes and those with demanding lifestyles.</p>
-            
-            <p>Shilajit is also celebrated for its potential to boost testosterone levels in men. Research indicates that it can increase free testosterone, total testosterone, and dehydroepiandrosterone (DHEA) levels, which are essential for muscle mass, bone density, and overall vitality.</p>
-            
-            <p>In terms of cognitive health, Shilajit has shown promise in preventing or slowing the progression of Alzheimer's disease. The fulvic acid acts as an antioxidant, inhibiting the accumulation of tau proteins that contribute to brain cell damage.</p>
-            
-            <p>Anti-aging properties are another key benefit of Shilajit. Its high antioxidant content helps combat free radicals, promoting healthier skin, reduced wrinkles, and improved overall longevity.</p>
-            
-            <p>Shilajit supports bone health, immune function, detoxification, heart health, and blood sugar regulation. It is truly a comprehensive natural supplement.</p>
-            
-            <p>At Dubai Shilajit, we are committed to bringing you the purest Himalayan Shilajit resin, sourced directly from high-altitude regions and rigorously tested for purity and potency.</p>
-            
-            <p>Stay tuned for our launch in Dubai – fast delivery across the UAE, exclusive offers, and premium quality guaranteed!</p>
+            <h2>عن الشيلاجيت</h2>
+            <p>الشيلاجيت هو مادة طبيعية قوية وعتيقة تم تبجيلها في الطب الأيورفيدي لآلاف السنين. ينشأ من مناطق الارتفاعات العالية في جبال الهيمالايا، ألتاي، القوقاز، وسلاسل جبلية أخرى، ويتكون الشيلاجيت على مدى قرون من تحلل المواد النباتية والميكروبية. هذا الراتنج الشبيه بالقطران غني بحمض الفولفيك، حمض الهيوميك، وأكثر من 84 معدنًا، مما يجعله قوة من المغذيات التي تدعم الصحة العامة والحيوية.</p>
+           
+            <p>تاريخيًا، تم استخدام الشيلاجيت في أنظمة الطب التقليدي عبر الهند، التبت، وآسيا الوسطى. تصفه النصوص القديمة بأنه "فاتح الجبال" و"مدمر الضعف"، مما يبرز دوره في تعزيز القوة الجسدية، الوضوح الذهني، والطول العمر. في العصور الحديثة، اكتسب الشيلاجيت شعبية عالمية كمكمل غذائي، خاصة لقدرته المحتملة على تعزيز مستويات الطاقة، تحسين الوظيفة الإدراكية، ودعم الصحة الإنجابية.</p>
+           
+            <h3>فوائد الشيلاجيت</h3>
+            <p>إحدى الفوائد الأكثر شهرة للشيلاجيت هي قدرته على زيادة الطاقة والتحمل. يساعد حمض الفولفيك في الشيلاجيت على نقل المغذيات إلى الخلايا، مما يعزز وظيفة الميتوكوندريا، وهي أمر حاسم لإنتاج الطاقة. أظهرت الدراسات أن الاستهلاك المنتظم للشيلاجيت يمكن أن يقلل الإرهاق ويحسن الأداء الجسدي، مما يجعله مكملًا مثاليًا للرياضيين وأولئك الذين لديهم أنماط حياة demanding.</p>
+           
+            <p>يُحتفل بالشيلاجيت أيضًا لقدرته المحتملة على رفع مستويات التستوستيرون لدى الرجال. تشير البحوث إلى أنه يمكن أن يزيد من التستوستيرون الحر، التستوستيرون الكلي، ومستويات DHEA، والتي ضرورية لكتلة العضلات، كثافة العظام، والحيوية العامة.</p>
+           
+            <p>فيما يتعلق بالصحة الإدراكية، أظهر الشيلاجيت وعدًا في منع أو إبطاء تقدم مرض الزهايمر. يعمل حمض الفولفيك كمضاد أكسدة، يمنع تراكم بروتينات تاو التي تساهم في تلف خلايا الدماغ.</p>
+           
+            <p>خصائص مكافحة الشيخوخة هي فائدة رئيسية أخرى للشيلاجيت. يساعد محتواه العالي من مضادات الأكسدة في مكافحة الجذور الحرة، مما يعزز بشرة أكثر صحة، تقليل التجاعيد، وتحسين الطول العمر العام.</p>
+           
+            <p>يدعم الشيلاجيت صحة العظام، وظيفة المناعة، إزالة السموم، صحة القلب، وتنظيم سكر الدم. إنه مكمل طبيعي شامل حقًا.</p>
+           
+            <p>في دبي شيلاجيت، نحن ملتزمون بجلب أنقى راتنج شيلاجيت هيمالايا، مصدره مباشرة من مناطق الارتفاعات العالية ومختبره بدقة للنقاء والفعالية.</p>
+           
+            <p>ابقوا على اطلاع بإطلاقنا في دبي – توصيل سريع عبر الإمارات، عروض حصرية، وجودة ممتازة مضمونة!</p>
         </section>
     </div>
-    
+   
     <section id="testimonials" class="testimonials">
         <div class="container">
             <h2>What Our Customers Say</h2>
@@ -398,7 +396,7 @@
             </div>
         </div>
     </section>
-    
+   
     <section id="signup" class="signup">
         <h2>Sign Up for Launch Updates</h2>
         <form>
@@ -407,7 +405,7 @@
         </form>
         <p>Be the first to know about exclusive offers, launch date, and early access!</p>
     </section>
-    
+   
     <footer>
         &copy; 2025 Dubai Shilajit. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a>
     </footer>
