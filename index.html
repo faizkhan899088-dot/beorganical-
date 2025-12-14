@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dubai Shilajit - Premium Ecommerce Coming Soon</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -32,7 +33,7 @@
             padding: 0 20px;
         }
         nav .logo {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
         }
         nav ul {
@@ -93,157 +94,200 @@
             margin: 0 auto;
             padding: 40px 20px;
         }
-        .about {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            margin-bottom: 40px;
-        }
-        .about h2, .products h2 {
+        
+        /* Products Section - Now Upper */
+        .products-section {
+            padding: 60px 0;
             text-align: center;
+        }
+        .products-section h2 {
             color: #1a2b3c;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
+            font-size: 36px;
         }
         .products {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            justify-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         .product {
             background-color: white;
-            border-radius: 10px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+            transition: transform 0.4s, box-shadow 0.4s;
+            width: 100%;
+            max-width: 320px;
             text-align: center;
-            padding: 15px;
+            padding-bottom: 20px;
         }
         .product:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+            transform: translateY(-10px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
         }
         .product img {
             width: 100%;
-            height: 200px;
+            height: 240px;
             object-fit: cover;
-            border-radius: 10px 10px 0 0;
         }
         .product h3 {
-            margin: 10px 0;
+            margin: 15px 0 10px;
             color: #1a2b3c;
+            font-size: 20px;
         }
         .product p {
-            font-size: 14px;
+            font-size: 15px;
             color: #666;
+            padding: 0 15px;
         }
         .product .price {
-            font-size: 18px;
+            font-size: 22px;
             font-weight: bold;
             color: #28a745;
-            margin: 10px 0;
+            margin: 15px 0;
         }
         .product button {
             background-color: #28a745;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 30px;
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s;
-            width: 100%;
+            font-size: 16px;
+            width: 80%;
         }
         .product button:hover {
             background-color: #218838;
         }
+
+        /* About Section - Now Below Products */
+        .about {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.05);
+            margin: 60px 0;
+        }
+        .about h2 {
+            text-align: center;
+            color: #1a2b3c;
+            margin-bottom: 30px;
+            font-size: 36px;
+        }
+
         .testimonials {
             background-color: #f8f9fa;
-            padding: 40px 0;
+            padding: 60px 0;
             text-align: center;
         }
         .testimonials h2 {
             color: #1a2b3c;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            font-size: 36px;
         }
         .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         .testimonial {
             background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.05);
         }
         .testimonial p {
             font-style: italic;
             color: #555;
+            font-size: 16px;
         }
         .testimonial .author {
-            margin-top: 10px;
+            margin-top: 20px;
             font-weight: bold;
             color: #1a2b3c;
         }
+
         .signup {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://m.media-amazon.com/images/I/51lu0ZDWcAL._AC_UF1000,1000_QL80_.jpg');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://m.media-amazon.com/images/I/51lu0ZDWcAL._AC_UF1000,1000_QL80_.jpg');
             background-size: cover;
+            background-position: center;
             color: white;
             text-align: center;
-            padding: 60px 20px;
-            margin: 40px 0;
-            border-radius: 10px;
+            padding: 80px 20px;
+            margin: 60px 0;
+            border-radius: 15px;
         }
         .signup h2 {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            font-size: 36px;
         }
         .signup form {
-            max-width: 400px;
+            max-width: 500px;
             margin: 0 auto;
+            display: flex;
+            justify-content: center;
         }
         .signup input {
-            padding: 12px;
+            padding: 15px;
             width: 70%;
             border: none;
-            border-radius: 5px 0 0 5px;
-            font-size: 16px;
+            border-radius: 8px 0 0 8px;
+            font-size: 18px;
         }
         .signup button {
-            padding: 12px 20px;
+            padding: 15px 30px;
             background-color: #ffd700;
             color: #1a2b3c;
             border: none;
-            border-radius: 0 5px 5px 0;
+            border-radius: 0 8px 8px 0;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 18px;
+            font-weight: bold;
             transition: background-color 0.3s;
         }
         .signup button:hover {
             background-color: #e6c200;
         }
+
         footer {
             background-color: #1a2b3c;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 30px;
+            font-size: 15px;
         }
         footer a {
             color: #ffd700;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 15px;
         }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 40px;
+                font-size: 42px;
             }
             .hero p {
-                font-size: 18px;
+                font-size: 20px;
             }
-            nav ul {
+            .signup form {
                 flex-direction: column;
             }
-            nav ul li {
-                margin: 10px 0;
+            .signup input, .signup button {
+                width: 100%;
+                border-radius: 8px;
+                margin-bottom: 10px;
+            }
+            .signup button {
+                border-radius: 8px;
             }
         }
     </style>
@@ -253,8 +297,8 @@
         <nav>
             <div class="logo">Dubai Shilajit</div>
             <ul>
-                <li><a href="#about">About</a></li>
                 <li><a href="#products">Products</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#signup">Subscribe</a></li>
                 <li><a href="#"><i class="fas fa-shopping-cart"></i> Cart</a></li>
@@ -268,7 +312,50 @@
         <button>Notify Me on Launch</button>
     </section>
     
+    <!-- Products Section Moved Up -->
+    <section id="products" class="products-section">
+        <h2>Upcoming Products</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/61-M4u131QL._AC_UF1000,1000_QL80_.jpg" alt="Pure Himalayan Shilajit Resin">
+                <h3>Pure Himalayan Shilajit Resin</h3>
+                <p>High potency gold grade for maximum benefits.</p>
+                <div class="price">AED 199</div>
+                <button>Add to Cart (Coming Soon)</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/51-1+41e3kL._AC_UF1000,1000_QL80_.jpg" alt="Organic Shilajit Resin">
+                <h3>Organic Shilajit Resin</h3>
+                <p>Enhances health and boosts energy naturally.</p>
+                <div class="price">AED 179</div>
+                <button>Add to Cart (Coming Soon)</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/51lu0ZDWcAL._AC_UF1000,1000_QL80_.jpg" alt="VedVision Shilajit">
+                <h3>VedVision Shilajit</h3>
+                <p>400mg A Grade with essential minerals.</p>
+                <div class="price">AED 149</div>
+                <button>Add to Cart (Coming Soon)</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/717QvQaJrWL._AC_UF1000,1000_QL80_.jpg" alt="ZING Shilajit Resin">
+                <h3>ZING Shilajit Resin</h3>
+                <p>For men and women, 600mg servings.</p>
+                <div class="price">AED 229</div>
+                <button>Add to Cart (Coming Soon)</button>
+            </div>
+            <div class="product">
+                <img src="https://m.media-amazon.com/images/I/81Lj+t75xbL._AC_UF1000,1000_QL80_.jpg" alt="Premium Shilajit">
+                <h3>Premium Shilajit</h3>
+                <p>Natural and potent for daily wellness.</p>
+                <div class="price">AED 189</div>
+                <button>Add to Cart (Coming Soon)</button>
+            </div>
+        </div>
+    </section>
+    
     <div class="container">
+        <!-- About Section Now Below Products -->
         <section id="about" class="about">
             <h2>About Shilajit</h2>
             <p>Shilajit is a potent and ancient natural substance that has been revered in Ayurvedic medicine for thousands of years. Originating from the high-altitude regions of the Himalayas, Altai, Caucasus, and other mountain ranges, Shilajit is formed over centuries by the decomposition of plant and microbial matter. This tar-like resin is rich in fulvic acid, humic acid, and over 84 minerals, making it a powerhouse of nutrients that can support overall health and vitality.</p>
@@ -278,88 +365,17 @@
             <h3>Benefits of Shilajit</h3>
             <p>One of the most well-known benefits of Shilajit is its ability to increase energy and stamina. The fulvic acid in Shilajit helps in the transportation of nutrients into cells, enhancing mitochondrial function, which is crucial for energy production. Studies have shown that regular consumption of Shilajit can reduce fatigue and improve physical performance, making it an ideal supplement for athletes and those with demanding lifestyles.</p>
             
-            <p>Shilajit is also celebrated for its potential to boost testosterone levels in men. Research indicates that it can increase free testosterone, total testosterone, and dehydroepiandrosterone (DHEA) levels, which are essential for muscle mass, bone density, and overall vitality. This makes Shilajit a natural alternative for men seeking to enhance their hormonal balance without synthetic interventions.</p>
+            <p>Shilajit is also celebrated for its potential to boost testosterone levels in men. Research indicates that it can increase free testosterone, total testosterone, and dehydroepiandrosterone (DHEA) levels, which are essential for muscle mass, bone density, and overall vitality.</p>
             
-            <p>In terms of cognitive health, Shilajit has shown promise in preventing or slowing the progression of Alzheimer's disease. The fulvic acid acts as an antioxidant, inhibiting the accumulation of tau proteins that contribute to brain cell damage. Additionally, it supports brain health by reducing inflammation and oxidative stress, potentially improving memory, focus, and mental acuity.</p>
+            <p>In terms of cognitive health, Shilajit has shown promise in preventing or slowing the progression of Alzheimer's disease. The fulvic acid acts as an antioxidant, inhibiting the accumulation of tau proteins that contribute to brain cell damage.</p>
             
-            <p>Anti-aging properties are another key benefit of Shilajit. Its high antioxidant content helps combat free radicals, which are responsible for cellular damage and aging. By protecting cells and promoting regeneration, Shilajit can contribute to healthier skin, reduced wrinkles, and improved overall longevity. Some users report feeling more youthful and energetic after incorporating Shilajit into their routine.</p>
+            <p>Anti-aging properties are another key benefit of Shilajit. Its high antioxidant content helps combat free radicals, promoting healthier skin, reduced wrinkles, and improved overall longevity.</p>
             
-            <p>Shilajit supports bone health by aiding in the mineralization process and improving bone density. It may also help in managing conditions like osteoporosis. Furthermore, its anti-inflammatory properties can alleviate joint pain and support mobility, benefiting those with arthritis or other inflammatory conditions.</p>
+            <p>Shilajit supports bone health, immune function, detoxification, heart health, and blood sugar regulation. It is truly a comprehensive natural supplement.</p>
             
-            <p>For reproductive health, Shilajit is known as a rejuvenator. It enhances sperm quality, motility, and count in men, potentially improving fertility. In women, it can balance hormones and support menstrual health. Traditional uses include treating infertility and enhancing sexual performance.</p>
+            <p>At Dubai Shilajit, we are committed to bringing you the purest Himalayan Shilajit resin, sourced directly from high-altitude regions and rigorously tested for purity and potency.</p>
             
-            <p>Immune system support is another advantage. Shilajit's antimicrobial and anti-inflammatory effects can help fight infections and boost the body's defense mechanisms. It may also aid in detoxification by binding to toxins and heavy metals, facilitating their elimination from the body.</p>
-            
-            <p>Shilajit can help manage chronic fatigue syndrome (CFS) by addressing mitochondrial dysfunction, a key factor in CFS. Users often experience reduced symptoms of fatigue, improved mood, and better sleep quality.</p>
-            
-            <p>In terms of heart health, preliminary studies suggest that Shilajit may protect against heart disease by reducing heart rate and improving cardiac function. Its antioxidant properties can prevent lipid peroxidation, which is linked to cardiovascular issues.</p>
-            
-            <p>Additionally, Shilajit may support blood sugar regulation, making it beneficial for those with diabetes or prediabetes. It enhances insulin sensitivity and helps in glucose metabolism.</p>
-            
-            <h3>Uses of Shilajit</h3>
-            <p>Shilajit is typically consumed in resin form, dissolved in water or milk. The recommended dosage varies, but generally, 300-500mg per day is considered safe. It can be taken as a supplement for general health or targeted for specific benefits like energy boosting or hormonal support.</p>
-            
-            <p>In skincare, Shilajit is used in creams and masks for its anti-aging effects. It promotes collagen production and hydrates the skin. In sports nutrition, it's added to pre-workout supplements for enhanced performance.</p>
-            
-            <h3>Side Effects and Precautions</h3>
-            <p>While Shilajit is generally safe, it may cause side effects like digestive upset if not purified properly. Always choose high-quality, purified Shilajit to avoid contaminants. Pregnant or breastfeeding women, and those with certain medical conditions, should consult a healthcare provider before use.</p>
-            
-            <p>At Dubai Shilajit, we are committed to bringing you the purest Himalayan Shilajit resin, sourced directly from high-altitude regions. Our products undergo rigorous testing for purity and potency, ensuring you get the maximum benefits without any harmful additives. As we prepare to launch our ecommerce platform in Dubai, we aim to make this ancient superfood accessible to everyone in the UAE and beyond.</p>
-            
-            <p>Why Dubai? The vibrant city of Dubai is a hub for health and wellness enthusiasts. With its diverse population and growing interest in natural supplements, Dubai is the perfect place to introduce premium Shilajit products. Our coming soon ecommerce site will offer a range of Shilajit resins, capsules, and related products, with fast delivery across the UAE.</p>
-            
-            <p>Stay tuned for exclusive launches, discounts, and educational content on how to incorporate Shilajit into your daily routine. Whether you're looking to boost your energy, enhance your fitness, or support your overall well-being, Dubai Shilajit will be your trusted partner.</p>
-            
-            <p>In the meantime, learn more about this miraculous substance. Shilajit's mineral-rich composition includes iron, calcium, magnesium, and zinc, which are essential for various bodily functions. For instance, iron helps in oxygen transport, preventing anemia, while zinc supports immune function and wound healing.</p>
-            
-            <p>Research from various sources, including Healthline and Cleveland Clinic, highlights Shilajit's potential in treating altitude sickness by improving oxygenation and reducing symptoms like headache and nausea. This is particularly relevant for adventurers and those living in high-altitude areas.</p>
-            
-            <p>Moreover, Shilajit's adaptogenic properties help the body adapt to stress, reducing cortisol levels and promoting mental resilience. In a fast-paced world, this can be invaluable for managing anxiety and improving sleep.</p>
-            
-            <p>As an ecommerce platform, we will provide detailed product descriptions, customer reviews, and expert advice to help you choose the right Shilajit for your needs. Our blog will feature articles on Ayurvedic practices, recipes incorporating Shilajit, and success stories from users.</p>
-            
-            <p>We are excited to bring this natural treasure to Dubai. Sign up below to be the first to know when we launch!</p>
-            
-            <!-- Word count approximation: The above content is around 1050 words. -->
-        </section>
-        
-        <section id="products" class="products">
-            <h2>Upcoming Products</h2>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/61-M4u131QL._AC_UF1000,1000_QL80_.jpg" alt="Pure Himalayan Shilajit Resin 1">
-                <h3>Pure Himalayan Shilajit Resin</h3>
-                <p>High potency gold grade for maximum benefits.</p>
-                <div class="price">AED 199</div>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/51-1+41e3kL._AC_UF1000,1000_QL80_.jpg" alt="Pure Shilajit Resin 2">
-                <h3>Organic Shilajit Resin</h3>
-                <p>Enhances health and boosts energy.</p>
-                <div class="price">AED 179</div>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/51lu0ZDWcAL._AC_UF1000,1000_QL80_.jpg" alt="Pure Shilajit Resin 3">
-                <h3>VedVision Shilajit</h3>
-                <p>400mg A Grade with essential minerals.</p>
-                <div class="price">AED 149</div>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/717QvQaJrWL._AC_UF1000,1000_QL80_.jpg" alt="Pure Shilajit Resin 4">
-                <h3>ZING Shilajit Resin</h3>
-                <p>For men and women, 600mg servings.</p>
-                <div class="price">AED 229</div>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="https://m.media-amazon.com/images/I/81Lj+t75xbL._AC_UF1000,1000_QL80_.jpg" alt="Pure Shilajit Resin 5">
-                <h3>Premium Shilajit</h3>
-                <p>Natural and potent for daily use.</p>
-                <div class="price">AED 189</div>
-                <button>Add to Cart</button>
-            </div>
+            <p>Stay tuned for our launch in Dubai – fast delivery across the UAE, exclusive offers, and premium quality guaranteed!</p>
         </section>
     </div>
     
@@ -386,10 +402,10 @@
     <section id="signup" class="signup">
         <h2>Sign Up for Launch Updates</h2>
         <form>
-            <input type="email" placeholder="Enter your email">
-            <button>Subscribe</button>
+            <input type="email" placeholder="Enter your email address">
+            <button>Subscribe Now</button>
         </form>
-        <p>Be the first to know about exclusive offers and launch date!</p>
+        <p>Be the first to know about exclusive offers, launch date, and early access!</p>
     </section>
     
     <footer>
