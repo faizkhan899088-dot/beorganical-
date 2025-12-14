@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dubai Shilajit - Premium Ecommerce Coming Soon</title>
+    <title>دبي شيلاجيت - متجر إلكتروني فاخر قادم قريباً</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -14,7 +14,8 @@
             background-color: #f8f9fa;
             color: #333;
             line-height: 1.6;
-            direction: ltr; /* Keep overall LTR, but about section will be RTL */
+            direction: rtl; /* RTL for full Arabic */
+            text-align: right;
         }
         header {
             background-color: #1a2b3c;
@@ -44,7 +45,7 @@
             padding: 0;
         }
         nav ul li {
-            margin-left: 20px;
+            margin-right: 20px; /* Changed to right for RTL */
         }
         nav ul li a {
             color: white;
@@ -96,7 +97,7 @@
             padding: 40px 20px;
         }
        
-        /* Products Section - Now Upper */
+        /* Products Section */
         .products-section {
             padding: 60px 0;
             text-align: center;
@@ -164,14 +165,13 @@
         .product button:hover {
             background-color: #218838;
         }
-        /* About Section - Now Below Products */
+        /* About Section */
         .about {
             background-color: white;
             padding: 40px;
             border-radius: 15px;
             box-shadow: 0 6px 25px rgba(0,0,0,0.05);
             margin: 60px 0;
-            direction: rtl; /* RTL for Arabic text */
             text-align: right;
         }
         .about h2, .about h3 {
@@ -237,7 +237,7 @@
             padding: 15px;
             width: 70%;
             border: none;
-            border-radius: 8px 0 0 8px;
+            border-radius: 0 8px 8px 0; /* Adjusted for RTL */
             font-size: 18px;
         }
         .signup button {
@@ -245,7 +245,7 @@
             background-color: #ffd700;
             color: #1a2b3c;
             border: none;
-            border-radius: 0 8px 8px 0;
+            border-radius: 8px 0 0 8px; /* Adjusted for RTL */
             cursor: pointer;
             font-size: 18px;
             font-weight: bold;
@@ -293,67 +293,67 @@
 <body>
     <header>
         <nav>
-            <div class="logo">Dubai Shilajit</div>
+            <div class="logo">دبي شيلاجيت</div>
             <ul>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#signup">Subscribe</a></li>
-                <li><a href="#"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                <li><a href="#products">المنتجات</a></li>
+                <li><a href="#about">عن الشيلاجيت</a></li>
+                <li><a href="#testimonials">آراء العملاء</a></li>
+                <li><a href="#signup">الاشتراك</a></li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i> السلة</a></li>
             </ul>
         </nav>
     </header>
    
     <section class="hero">
-        <h1>Premium Shilajit Coming Soon to Dubai!</h1>
-        <p>Discover the ancient power of Himalayan Shilajit – Pure, Potent, and Natural.</p>
-        <button>Notify Me on Launch</button>
+        <h1>شيلاجيت فاخر قادم قريباً إلى دبي!</h1>
+        <p>اكتشف القوة القديمة لشيلاجيت الهيمالايا – نقي، قوي، وطبيعي.</p>
+        <button>أبلغني عند الإطلاق</button>
     </section>
    
-    <!-- Products Section Moved Up -->
+    <!-- Products Section -->
     <section id="products" class="products-section">
-        <h2>Upcoming Products</h2>
+        <h2>المنتجات القادمة</h2>
         <div class="products">
             <div class="product">
-                <img src="https://m.media-amazon.com/images/I/61-M4u131QL._AC_UF1000,1000_QL80_.jpg" alt="Pure Himalayan Shilajit Resin">
-                <h3>Pure Himalayan Shilajit Resin</h3>
-                <p>High potency gold grade for maximum benefits.</p>
-                <div class="price">AED 199</div>
-                <button onclick="window.location.href='https://wa.me/971501234567?text=I'm%20interested%20in%20Pure%20Himalayan%20Shilajit%20Resin'">Add to Cart (Coming Soon)</button>
+                <img src="https://m.media-amazon.com/images/I/61-M4u131QL._AC_UF1000,1000_QL80_.jpg" alt="راتنج شيلاجيت هيمالايا نقي">
+                <h3>راتنج شيلاجيت هيمالايا نقي</h3>
+                <p>درجة ذهبية عالية الفعالية لأقصى الفوائد.</p>
+                <div class="price">199 درهم إماراتي</div>
+                <button onclick="window.location.href='https://wa.me/971501234567?text=أنا%20مهتم%20براتنج%20شيلاجيت%20هيمالايا%20نقي'">إضافة إلى السلة (قريباً)</button>
             </div>
             <div class="product">
-                <img src="https://m.media-amazon.com/images/I/51-1+41e3kL._AC_UF1000,1000_QL80_.jpg" alt="Organic Shilajit Resin">
-                <h3>Organic Shilajit Resin</h3>
-                <p>Enhances health and boosts energy naturally.</p>
-                <div class="price">AED 179</div>
-                <button onclick="window.location.href='https://wa.me/971501234567?text=I'm%20interested%20in%20Organic%20Shilajit%20Resin'">Add to Cart (Coming Soon)</button>
+                <img src="https://m.media-amazon.com/images/I/51-1+41e3kL._AC_UF1000,1000_QL80_.jpg" alt="راتنج شيلاجيت عضوي">
+                <h3>راتنج شيلاجيت عضوي</h3>
+                <p>يعزز الصحة ويرفع الطاقة بشكل طبيعي.</p>
+                <div class="price">179 درهم إماراتي</div>
+                <button onclick="window.location.href='https://wa.me/971501234567?text=أنا%20مهتم%20براتنج%20شيلاجيت%20عضوي'">إضافة إلى السلة (قريباً)</button>
             </div>
             <div class="product">
-                <img src="https://m.media-amazon.com/images/I/51lu0ZDWcAL._AC_UF1000,1000_QL80_.jpg" alt="VedVision Shilajit">
-                <h3>VedVision Shilajit</h3>
-                <p>400mg A Grade with essential minerals.</p>
-                <div class="price">AED 149</div>
-                <button onclick="window.location.href='https://wa.me/971501234567?text=I'm%20interested%20in%20VedVision%20Shilajit'">Add to Cart (Coming Soon)</button>
+                <img src="https://m.media-amazon.com/images/I/51lu0ZDWcAL._AC_UF1000,1000_QL80_.jpg" alt="شيلاجيت فيدويجن">
+                <h3>شيلاجيت فيدويجن</h3>
+                <p>400 مجم درجة A مع معادن أساسية.</p>
+                <div class="price">149 درهم إماراتي</div>
+                <button onclick="window.location.href='https://wa.me/971501234567?text=أنا%20مهتم%20بشيلاجيت%20فيدويجن'">إضافة إلى السلة (قريباً)</button>
             </div>
             <div class="product">
-                <img src="https://m.media-amazon.com/images/I/717QvQaJrWL._AC_UF1000,1000_QL80_.jpg" alt="ZING Shilajit Resin">
-                <h3>ZING Shilajit Resin</h3>
-                <p>For men and women, 600mg servings.</p>
-                <div class="price">AED 229</div>
-                <button onclick="window.location.href='https://wa.me/971501234567?text=I'm%20interested%20in%20ZING%20Shilajit%20Resin'">Add to Cart (Coming Soon)</button>
+                <img src="https://m.media-amazon.com/images/I/717QvQaJrWL._AC_UF1000,1000_QL80_.jpg" alt="راتنج شيلاجيت زينج">
+                <h3>راتنج شيلاجيت زينج</h3>
+                <p>للرجال والنساء، حصص 600 مجم.</p>
+                <div class="price">229 درهم إماراتي</div>
+                <button onclick="window.location.href='https://wa.me/971501234567?text=أنا%20مهتم%20براتنج%20شيلاجيت%20زينج'">إضافة إلى السلة (قريباً)</button>
             </div>
             <div class="product">
-                <img src="https://m.media-amazon.com/images/I/81Lj+t75xbL._AC_UF1000,1000_QL80_.jpg" alt="Premium Shilajit">
-                <h3>Premium Shilajit</h3>
-                <p>Natural and potent for daily wellness.</p>
-                <div class="price">AED 189</div>
-                <button onclick="window.location.href='https://wa.me/971501234567?text=I'm%20interested%20in%20Premium%20Shilajit'">Add to Cart (Coming Soon)</button>
+                <img src="https://m.media-amazon.com/images/I/81Lj+t75xbL._AC_UF1000,1000_QL80_.jpg" alt="شيلاجيت فاخر">
+                <h3>شيلاجيت فاخر</h3>
+                <p>طبيعي وقوي للعافية اليومية.</p>
+                <div class="price">189 درهم إماراتي</div>
+                <button onclick="window.location.href='https://wa.me/971501234567?text=أنا%20مهتم%20بشيلاجيت%20فاخر'">إضافة إلى السلة (قريباً)</button>
             </div>
         </div>
     </section>
    
     <div class="container">
-        <!-- About Section Now Below Products - In Arabic -->
+        <!-- About Section -->
         <section id="about" class="about">
             <h2>عن الشيلاجيت</h2>
             <p>الشيلاجيت هو مادة طبيعية قوية وعتيقة تم تبجيلها في الطب الأيورفيدي لآلاف السنين. ينشأ من مناطق الارتفاعات العالية في جبال الهيمالايا، ألتاي، القوقاز، وسلاسل جبلية أخرى، ويتكون الشيلاجيت على مدى قرون من تحلل المواد النباتية والميكروبية. هذا الراتنج الشبيه بالقطران غني بحمض الفولفيك، حمض الهيوميك، وأكثر من 84 معدنًا، مما يجعله قوة من المغذيات التي تدعم الصحة العامة والحيوية.</p>
@@ -379,35 +379,35 @@
    
     <section id="testimonials" class="testimonials">
         <div class="container">
-            <h2>What Our Customers Say</h2>
+            <h2>ما يقوله عملاؤنا</h2>
             <div class="testimonial-grid">
                 <div class="testimonial">
-                    <p>"Shilajit has transformed my energy levels! Can't wait for the Dubai launch."</p>
-                    <div class="author">- Ahmed K., Dubai</div>
+                    <p>"الشيلاجيت غير مستويات طاقتي! لا أستطيع الانتظار لإطلاق دبي."</p>
+                    <div class="author">- أحمد ك.، دبي</div>
                 </div>
                 <div class="testimonial">
-                    <p>"Pure and effective. Best natural supplement I've tried."</p>
-                    <div class="author">- Sara M., Abu Dhabi</div>
+                    <p>"نقي وفعال. أفضل مكمل طبيعي جربته."</p>
+                    <div class="author">- سارة م.، أبو ظبي</div>
                 </div>
                 <div class="testimonial">
-                    <p>"Helped with my workout recovery immensely."</p>
-                    <div class="author">- Raj P., Sharjah</div>
+                    <p>"ساعد بشكل كبير في تعافي التمارين."</p>
+                    <div class="author">- راج ب.، الشارقة</div>
                 </div>
             </div>
         </div>
     </section>
    
     <section id="signup" class="signup">
-        <h2>Sign Up for Launch Updates</h2>
+        <h2>اشترك لتحديثات الإطلاق</h2>
         <form>
-            <input type="email" placeholder="Enter your email address">
-            <button>Subscribe Now</button>
+            <input type="email" placeholder="أدخل عنوان بريدك الإلكتروني">
+            <button>اشترك الآن</button>
         </form>
-        <p>Be the first to know about exclusive offers, launch date, and early access!</p>
+        <p>كن أول من يعرف عن العروض الحصرية، تاريخ الإطلاق، والوصول المبكر!</p>
     </section>
    
     <footer>
-        &copy; 2025 Dubai Shilajit. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact Us</a>
+        &copy; 2025 دبي شيلاجيت. جميع الحقوق محفوظة. | <a href="#">سياسة الخصوصية</a> | <a href="#">شروط الخدمة</a> | <a href="#">اتصل بنا</a>
     </footer>
 </body>
 </html>
